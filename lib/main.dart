@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:learning_flutter/pages/login_page.dart';
 
-import 'home_page.dart';
+import 'pages/home_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -19,7 +20,14 @@ class MyApp extends StatelessWidget {
     //final (can be changed when addition is done)
 
     return MaterialApp(
-      home: HomePage(),
+      //home: HomePage(),
+      themeMode: ThemeMode.light,
+      darkTheme: ThemeData(brightness: Brightness.dark),
+      theme: ThemeData(primarySwatch: Colors.deepPurple),
+      routes: {
+        "/": (context) => LoginPage(),
+        "/HomePage": (context) => HomePage(),
+      },
     );
   }
 }
