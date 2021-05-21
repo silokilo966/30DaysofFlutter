@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:learning_flutter/pages/login_page.dart';
-
+import 'package:google_fonts/google_fonts.dart';
 import 'pages/home_page.dart';
 
 void main() {
@@ -9,7 +9,7 @@ void main() {
 
 class MyApp extends StatelessWidget {
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) { 
     //int days = 30;
     //String name = "Saeed";
     //dobule pi = 3.14
@@ -23,8 +23,10 @@ class MyApp extends StatelessWidget {
       //home: HomePage(),
       themeMode: ThemeMode.light,
       darkTheme: ThemeData(brightness: Brightness.dark),
-      theme: ThemeData(primarySwatch: Colors.deepPurple),
-      initialRoute: "/HomePage",
+      theme: ThemeData(
+          primarySwatch: Colors.deepPurple,
+          fontFamily: GoogleFonts.lato().fontFamily),
+      initialRoute: "/",
       routes: {
         "/": (context) => LoginPage(),
         "/HomePage": (context) => HomePage(),
