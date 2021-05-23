@@ -10,7 +10,7 @@ void main() {
 
 class MyApp extends StatelessWidget {
   @override
-  Widget build(BuildContext context) { 
+  Widget build(BuildContext context) {
     //int days = 30;
     //String name = "Saeed";
     //dobule pi = 3.14
@@ -27,7 +27,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
           primarySwatch: Colors.deepPurple,
           fontFamily: GoogleFonts.lato().fontFamily),
-      initialRoute: "/",
+      initialRoute: MyRoutes.homeRoute,
+      debugShowCheckedModeBanner: false,
       routes: {
         "/": (context) => LoginPage(),
         MyRoutes.homeRoute: (context) => HomePage(),
