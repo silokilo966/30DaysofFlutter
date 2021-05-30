@@ -1,14 +1,7 @@
+import 'dart:convert';
+
 class CatalogModel {
-  static final items = [
-    Item(
-        id: 1,
-        name: "iPhone 12 Pro Max",
-        desc: "Apple iphone 12th Gen",
-        price: 999,
-        color: "#33505a",
-        image:
-            "https://www.gizmochina.com/wp-content/uploads/2019/09/Apple-iPhone-11-Pro-Max-1.jpg")
-  ];
+  static List<Item> items;
 }
 
 class Item {
@@ -19,5 +12,108 @@ class Item {
   final String color;
   final String image;
 
-  Item({this.id, this.name, this.desc, this.price, this.color, this.image});
+  Item({
+    this.id,
+    this.name,
+    this.desc,
+    this.price,
+    this.color,
+    this.image,
+  });
+
+  //According to Dart documentation,
+  //we use the factory keyword when implementing a constructor that doesn’t always
+  //create a new instance of its class and that’s what we need right now.
+
+//   factory Item.fromMap(Map<String, dynamic> map) { //Json decode | Model Class
+//     return Item(
+//       id: map["id"],
+//       name: map["name"],
+//       desc: map["desc"],
+//       price: map["price"],
+//       color: map["color"],
+//       image: map["image"],
+//     );
+//   }
+
+//   toMap() => { //Json Encode
+//         "id": id,
+//         "name": name,
+//         "desc": desc,
+//         "price": price,
+//         "color": color,
+//         "image": image
+//       };
+
+  Item copyWith({
+    int id,
+    String name,
+    String desc,
+    num price,
+    String color,
+    String image,
+  }) {
+    return Item(
+      id: id ?? this.id,
+      name: name ?? this.name,
+      desc: desc ?? this.desc,
+      price: price ?? this.price,
+      color: color ?? this.color,
+      image: image ?? this.image,
+    );
+  }
+
+  Map<String, dynamic> toMap() {
+    return {
+      'id': id,
+      'name': name,
+      'desc': desc,
+      'price': price,
+      'color': color,
+      'image': image,
+    };
+  }
+
+  factory Item.fromMap(Map<String, dynamic> map) {
+    return Item(
+      id: map['id'],
+      name: map['name'],
+      desc: map['desc'],
+      price: map['price'],
+      color: map['color'],
+      image: map['image'],
+    );
+  }
+
+  String toJson() => json.encode(toMap());
+
+  factory Item.fromJson(String source) => Item.fromMap(json.decode(source));
+
+  @override
+  String toString() {
+    return 'Item(id: $id, name: $name, desc: $desc, price: $price, color: $color, image: $image)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+
+    return other is Item &&
+        other.id == id &&
+        other.name == name &&
+        other.desc == desc &&
+        other.price == price &&
+        other.color == color &&
+        other.image == image;
+  }
+
+  @override
+  int get hashCode {
+    return id.hashCode ^
+        name.hashCode ^
+        desc.hashCode ^
+        price.hashCode ^
+        color.hashCode ^
+        image.hashCode;
+  }
 }

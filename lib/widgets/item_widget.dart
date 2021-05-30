@@ -11,7 +11,7 @@ class ItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      //Card widget that keeps everything in the box
+      //Card widget that keeps everything in the box 
       child: ListTile(
         onTap: () {
           print(" ${item.name} pressed");
@@ -23,7 +23,7 @@ class ItemWidget extends StatelessWidget {
           "\$${item.price}",
           textScaleFactor: 1.5,
           style: TextStyle(
-            color: Colors.deepPurple,
+            color: Colors.deepPurple,  
             fontWeight: FontWeight.bold,
           ),
         ),

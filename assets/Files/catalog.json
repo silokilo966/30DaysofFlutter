@@ -1,0 +1,52 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "iPhone 12 Pro Max",
+            "desc": "Apple iphone 12th Gen",
+            "price": 600,
+            "color": "#33505a",
+            "image": "https://www.gizmochina.com/wp-content/uploads/2019/09/Apple-iPhone-11-Pro-Max-1.jpg"
+        },
+        {
+            "id": 2,
+            "name": "Apple Macbook Pro 2020",
+            "desc": "Apple Macbook pro 2020",
+            "price": 2000,
+            "color": "#33505a",
+            "image": "https://www.tejar.pk/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/a/p/apple_13-inch_macbook_pro_2020_1_-_tejar.jpg"
+        },
+        {
+            "id": 3,
+            "name": "Pixel 5",
+            "desc": "Google Pixel 5",
+            "price": 450,
+            "color": "#33505a",
+            "image": "https://cdn.alzashop.com/ImgW.ashx?fd=f16&cd=GPX1066b1"
+        },
+        {
+            "id": 4,
+            "name": "AirPods Pro",
+            "desc": "Apple Airpods Pro",
+            "price": 150,
+            "color": "#33505a",
+            "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MWP22?wid=2000&hei=2000&fmt=jpeg&qlt=95&.v=1591634795000"
+        },
+        {
+            "id": 5,
+            "name": "iPad Pro",
+            "desc": "Apple iPad Pro 2020 Edition",
+            "price": 999,
+            "color": "#33505a",
+            "image": "https://myshop.pk/pub/media/catalog/product/cache/26f8091d81cea4b38d820a1d1a4f62be/a/p/apple_ipad_pro_12.9_128gb_myshop_pk_4.jpg"
+        },
+        {
+            "id": 6,
+            "name": "Apple Mac Mini",
+            "desc": "Apple Mac Mini 2020 Edition",
+            "price": 1500,
+            "color": "#33505a",
+            "image": "https://www.paklap.pk/pub/media/catalog/product/cache/7e76858baa02afd4bb6d466a87d0383e/a/p/apple-mac-mini-2020-with-m1-pakistan.jpg"
+        }
+    ]
+}
